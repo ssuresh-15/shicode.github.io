@@ -1,2 +1,12 @@
 markdown: kramdown
 remote_theme: hydecorp/hydejack
+
+menu:
+  - title: Blog
+    url:   /blog/
+  - title: Projects
+    url:   /projects/
+  - title: Resume
+    url:   /resume/
+  - title: About
+    url:   /about/
