@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Config
 # ========================================================================================
 
@@ -423,6 +424,9 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+=======
+theme: jekyll-theme-minimal
+>>>>>>> parent of a022bb6 (Set theme jekyll-theme-cayman)
 =======
 theme: jekyll-theme-minimal
 >>>>>>> parent of a022bb6 (Set theme jekyll-theme-cayman)
