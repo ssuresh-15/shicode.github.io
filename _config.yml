@@ -1,5 +1,9 @@
 markdown: kramdown
 remote_theme: hydecorp/hydejack
+plugins:
+  - jekyll-paginate
+paginate:      10
+paginate_path: '/:num/'
 
 font:         Noto Sans, Helvetica, Arial, sans-serif
 font_heading: Roboto Slab, Helvetica, Arial, sans-serif
