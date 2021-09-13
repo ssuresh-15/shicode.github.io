@@ -17,11 +17,11 @@ permalink: /
 }
 </style>
 
-I'm a CS masters student with an interest in NLP. Less interested in caffeinated, insomnia but that keeps happening too.
+I'm a CS masters student with an interest in NLP. Less interested in caffeinated insomnia but that keeps happening too.
 
 
-## My own projects
+## Currently working on ...
 Cracking the Turing Test
 
-### Currently in progress
+### But mainly ...
 Grad School
