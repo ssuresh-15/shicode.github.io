@@ -1,5 +1,6 @@
 markdown: kramdown
-remote_theme: hydecorp/hydejack
+#remote_theme: hydecorp/hydejack
+theme: jekyll-theme-hydejack
 url: https://shicode.github.io
 baseurl:               ''
 
@@ -57,3 +58,203 @@ author:
     github:  shicode
     email:    ssuresh@umass.edu
 
+collections:
+  featured_categories:
+    permalink: /:name/
+    output: true
+
+  featured_tags:
+    permalink: /tag-:name/
+    output: true
+
+  projects:
+    permalink: /projects/:path/
+    output: true
+
+defaults:
+ # You can use this to provide a default accent color and background for
+  # all pages under a given path:
+  - scope:
+      path: hyde/
+    values:
+      accent_color: rgb(38,139,210)
+      accent_image:
+        background: rgb(32,32,32)
+        overlay: false
+
+  # Don't include documents in assets in the sitemap
+  - scope:
+      path: assets/
+    values:
+      sitemap: false
+
+  # Don't include licenses in sitemap (feel free to delete)
+  - scope:
+      path: licenses/
+    values:
+      sitemap: false
+
+  # You can use the following to enable comments on all posts.
+  - scope:
+      type: posts
+    values:
+      comments: true
+  - scope:
+      type: projects
+    values:
+      seo:
+        type: WebPage
+  - scope:
+      type: featured_categories
+    values:
+      seo:
+        type: WebPage
+  - scope:
+      type: featured_tags
+    values:
+      seo:
+        type: WebPage
+
+kramdown:
+  math_engine: katex
+  math_engine_opts: {}
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+
+hydejack:
+  # Configure the order of complementary content on blog posts
+  post_addons: [about, newsletter, related, random, comments]
+
+  # Configure the order of complementary content on project pages
+  project_addons: [about, newsletter, other, comments]
+
+  # Set to `true` if you don't want to show an icon indicating external links
+  no_mark_external: false
+
+  # Set to `true` if third party plugins fail to work with dynamically loaded pages
+  no_push_state: false
+
+  # Set to `true` if you want to disable the drawer
+  no_drawer: false
+
+  # Set to `true` if you don't to use the auto-hiding (JavaScript based) navbar.
+  # Note that this will not hide the navbar completely, only replace it with a static one.
+  # Use custom css to hide completely, e.g. `#_navbar { display: none }`.
+  no_navbar: false
+
+  # Set to true to disable the built-in search functionality.
+  # Note that search is disabled during local use to save on build time.
+  # Run Jekyll with the `JEKYLL_ENV` environment variable set to `production` to enable.
+  no_search: false
+
+  # Set to `true` if you do not want parts of the css inlined in <head/>
+  # This will increase site build speed dramatically!
+  no_inline_css: false
+
+  # Set to `true` if you don't intend on changing the accent color on a per-page basis.
+  # This will increase site build speed!
+  no_page_style: true
+
+  # Code blocks and tables "break" the layout by spanning the full available width.
+  # Set this to true if you want them to be the same width as other content.
+  no_break_layout: true
+
+  # Set to `true` to disable the dynamic Table of Contents on large screens.
+  no_toc: false
+
+  # When set to `true`, will not extend the content in the "third column" on large screens.
+  # Instead, all content will remains within the center column.
+  # Note that this will not affect the Table of Contents, use `no_toc` instead.
+  no_third_column: false
+
+  # Set to `true` if you don't like oversized headlines on large screens.
+  no_large_headings: false
+
+  # Set to `true` if you do not want to expose your resume and projects
+  # in machine-readable formats.
+  no_structured_data: false
+
+  # You can set this to `true` if you don't want to set the `theme-color` meta tag,
+  # This only affects the meta tag, not the color specified in the app manifest.
+  no_theme_color: false
+
+  # Set to `true` when building with the `--lsi` option
+  use_lsi: true
+
+  # When using Google Analytics, set to `true` to display a cookie notice banner.
+  # When enabled, no user-related data will be stored until the user gives consent.
+  cookies_banner: true
+
+
+# Plugin Configs
+# ---------------------------------------------------------------------------------------
+optional_front_matter:
+  remove_originals: true
+
+readme_index:
+  remove_originals: true
+  with_frontmatter: true
+
+relative_links:
+  collections: true
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+compress_html:
+  comments: ['<!-- ', ' -->']
+  clippings: all
+  endings: all
+  ignore:
+    envs: [development]
+
+sass:
+  style: compressed
+ 
+
+
+# File inclusion/exclusion
+# ----------------------------------------------------------------------------------------
+
+exclude:
+  - .jekyll-cache
+  - .sass-cache
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+include:
+  - .well-known
+  - LICENSE.md
+  - _redirects
+
+
+# Jekyll Compose Defaults
+# ---------------------------------------------------------------------------------------
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      title: My new draft!
+      description: A short ~160 character description of your post for search engines, social media previews, etc.
+      image:
+        path: /assets/global/img/bg/sidebar-bg-3000x1688.webp
+      author: tvdn
+    posts:
+      layout: post
+      title: My new post!
+      description: A short ~160 character description of your post for search engines, social media previews, etc.
+      image:
+        path: /assets/global/img/bg/sidebar-bg-3000x1688.webp
+      author: tvdn
+    projects:
+      layout: project
+      description: >
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /assets/global/img/bg/sidebar-bg-3000x1688.webp
+      links:
+        - title: Project Link
+          url: https://example.com
+      url: https://example.com
