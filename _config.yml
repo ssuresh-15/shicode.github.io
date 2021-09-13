@@ -1,6 +1,6 @@
 markdown: kramdown
 remote_theme: hydecorp/hydejack
-accent_image: ../images/oregon_coast.jpg
+#accent_image: ../images/oregon_coast.jpg
 accent_color: rgb(79,177,186)
 
 menu:
