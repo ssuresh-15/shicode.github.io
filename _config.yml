@@ -1,10 +1,34 @@
 markdown: kramdown
 remote_theme: hydecorp/hydejack
+url: https://shicode.github.io
+baseurl:               ''
+
 plugins:
   - jekyll-paginate
   - jekyll-avatar
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+  - jekyll-last-modified-at
+  - jemoji
+
 paginate:      10
 paginate_path: '/:num/'
+
+title: Shilpa Suresh
+description:  >
+ MS in Computer Science, UMass-Amherst
+logo: /images/oregon_coast.jpg 
+
+copyright: © 2021. All rights reserved.
 
 font:         Noto Sans, Helvetica, Arial, sans-serif
 font_heading: Roboto Slab, Helvetica, Arial, sans-serif
@@ -32,3 +56,4 @@ author:
     twitter: shilpa15397
     github:  shicode
     email:    ssuresh@umass.edu
+
