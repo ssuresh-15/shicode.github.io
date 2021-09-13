@@ -1,6 +1,5 @@
 markdown: kramdown
-#remote_theme: hydecorp/hydejack
-theme: jekyll-theme-hydejack
+remote_theme: hydecorp/hydejack
 url: https://shicode.github.io
 baseurl:               ''
 
