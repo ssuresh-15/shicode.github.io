@@ -1,5 +1,5 @@
-markdown: kramdown
-remote_theme: hydecorp/hydejack
+#markdown: kramdown
+theme: minimal-mistakes-jekyll
 url: https://shicode.github.io
 baseurl:               ''
 
@@ -19,6 +19,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
   - jemoji
+  - jekyll-include-cache
 
 paginate:      10
 paginate_path: '/:num/'
@@ -257,3 +258,12 @@ jekyll_compose:
         - title: Project Link
           url: https://example.com
       url: https://example.com
+
+
+collections:
+  featured_categories:
+    permalink:         /:name/
+    output:            true
+  featured_tags:
+    permalink:         /tag-:name/
+    output:            true
